@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .blog-post {
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post h2 {
+            color: #333333;
+            cursor: pointer;
+        }
+        .blog-post .content {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-post">
+        <h2>Blog Post 1</h2>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a bibendum bibendum, augue magna tincidunt enim, eget ultricies magna augue eget est. Maecenas vestibulum felis sed augue malesuada, id feugiat dui viverra.</p>
+        </div>
+    </div>
+    <div class="blog-post">
+        <h2>Blog Post 2</h2>
+        <div class="content">
+            <p>Nulla facilisi. Fusce euismod, nulla sit amet aliquam lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl sit amet nisl. Sed euismod, nulla sit amet aliquam lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl sit amet nisl.</p>
+        </div>
+    </div>
+    <div class="blog-post">
+        <h2>Blog Post 3</h2>
+        <div class="content">
+            <p>Phasellus quis ante at nunc commodo rutrum. Nullam vel enim at purus accumsan dignissim. Aenean euismod, nulla sit amet aliquam lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl sit amet nisl.</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".blog-post h2").click(function() {
+                $(this).next(".content").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
